@@ -1,10 +1,5 @@
 #!/bin/bash
-cert="cat /root/ca.crt"
-echo \<ca\> >> /root/android/client.ovpn
-$cert >> /root/android/client.ovpn
-echo \</ca\> >> /root/android/client.ovpn
-echo \<tls-auth\> >> /root/android/client.ovpn
-key="cat /root/ta.key"
-$key >> /root/android/client.ovpn
-echo \</tls-auth\> >> /root/android/client.ovpn
+apt-get install openvpn apache2 php5-mysql mysql-server php5 nodejs unzip git wget sed npm curl
+npm install -g bower
+ln -s /usr/bin/nodejs /usr/bin/node
 exit 0
